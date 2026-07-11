@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl \
 COPY --from=builder /root/.local /home/appuser/.local
 COPY --chown=appuser:appuser . .
 
-VOLUME ["/app/data"]
+RUN mkdir -p /app/data && chown appuser:appuser /app/data
 
 USER appuser
 ENV PATH=/home/appuser/.local/bin:$PATH

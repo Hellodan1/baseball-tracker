@@ -6,7 +6,7 @@ services:
     volumes:
       - db-data:/app/data
     environment:
-      - DATABASE_URL=sqlite:////app/data/mlb.db #eventually if I ever want to switch to get experience with postgres this will help make the switch easier
+      - DATABASE_URL=sqlite:////app/data/baseball.db #eventually if I ever want to switch to get experience with postgres this will help make the switch easier
   
   frontend:
     build: ./frontend
